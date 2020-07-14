@@ -10,7 +10,7 @@ Servicios.
 
 	get /market
 
-		Servicio que retorna el equivalente de 1$ dolar en las siguientes monedas BTC,DASH,EUR,VEF,PTR,ETH.
+Servicio que retorna el equivalente de 1$ dolar en las siguientes monedas BTC,DASH,EUR,VEF,PTR,ETH.
 
 		Ejemplo de Respusta
 
@@ -23,17 +23,17 @@ Servicios.
 		  "PTR": 60
 		}
 
-		Cada vez que corre exitosamente este servicio se actualiza el archivo exchangeRates.json, en caso de que falle la conexión al api se utilizará el archivo para tomar el ultimo valor conseguido.
+Cada vez que corre exitosamente este servicio se actualiza el archivo exchangeRates.json, en caso de que falle la conexión al api se utilizará el archivo para tomar el ultimo valor conseguido.
 
-		Limitaciones:
+Limitaciones:
 			
-			1. Debido a que no encontre un API para el Petro el valor siempre es el de por defecto 60.
-			2. Se necesita al menos una llamada al servicio exitosa para cargar unos valores al archivo.
+		1. Debido a que no encontre un API para el Petro el valor siempre es el de por defecto 60.
+		2. Se necesita al menos una llamada al servicio exitosa para cargar unos valores al archivo.
 
 
 	POST /exchange
 
-		Servicio que recibe los parametros query STRING monto y moneda y devuelve la conversión en todas las monedas disponibles.
+Servicio que recibe los parametros query STRING monto y moneda y devuelve la conversión en todas las monedas disponibles.
 
 		Ejemplo de Query:
 
