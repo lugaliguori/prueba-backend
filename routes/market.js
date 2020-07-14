@@ -22,14 +22,13 @@ async function getBTCPrice () {
 		  	console.log('Error ', error)
 			return rates["BTC"]
 		  }else{
-		  	//el api devuelve un string que tengo que cortar
-		  	rate = body.substr(body.indexOf(":") +1 ,body.indexOf("}")  - 1);
-		  	rates["BTC"] = parseFloat(rate);
-		  	return  parseFloat(rate);	
+		  	body = JSON.parse(body)
+		  	rates["BTC"] = body["USD"]
+		  	return body;	
 		  }
 		});
-		value = value.substr(value.indexOf(":") +1 ,value.indexOf("}")  - 1 );
-		return parseFloat(value);
+		value = JSON.parse(value)
+		return value["USD"] ;
 
 	}catch(e){
 		console.log('Look something happened ', e)
@@ -51,13 +50,13 @@ async function getETHPrice () {
 		  	console.log('Error ', error)
 			return rates["ETH"]
 		  }else{
-		  	rate = body.substr(body.indexOf(":") +1 ,body.indexOf("}")  - 1);
-		  	rates["ETH"] = parseFloat(rate);
-		  	return parseFloat(rate);	
+		  	body = JSON.parse(body)
+		  	rates["ETH"] = body["USD"]
+		  	return body;	
 		  }
 		});
-		value = value.substr(value.indexOf(":") +1 ,value.indexOf("}")  - 1 );
-		return parseFloat(value);
+		value = JSON.parse(value)
+		return value["USD"] ;
 
 	}catch(e){
 		console.log('Look something happened ', e)
@@ -78,13 +77,13 @@ async function getDASHPrice () {
 		  	console.log('Error ', error)
 			return rates["DASH"]
 		  }else{
-		  	rate = body.substr(body.indexOf(":") +1 ,body.indexOf("}")  - 1);
-		  	rates["DASH"] = parseFloat(rate);
-		  	return parseFloat(rate);	
+		  	body = JSON.parse(body)
+		  	rates["DASH"] = body["USD"]
+		  	return body;		
 		  }
 		});
-		value = value.substr(value.indexOf(":") +1 ,value.indexOf("}")  - 1 );
-		return parseFloat(value);
+		value = JSON.parse(value)
+		return value["USD"] ;
 	}catch(e){
 		console.log('Look something happened ', e)
 		return rates["DASH"]
@@ -103,14 +102,14 @@ async function getEURPrice () {
 		  	console.log('Error ', error)
 			return rates["EUR"]
 		  }else{
-		  	rate = body.substr(body.indexOf(":") +1 ,body.indexOf("}")  - 1);
-		  	rates["EUR"] = parseFloat(rate);
-		  	return parseFloat(rate);
+		  	body = JSON.parse(body)
+		  	rates["EUR"] = body["USD"]
+		  	return body;	
 		  }
 		  
 		});
-		value = value.substr(value.indexOf(":") +1 ,value.indexOf("}")  - 1 );
-		return parseFloat(value);
+		value = JSON.parse(value)
+		return value["USD"] ;
 	}catch(e){
 		console.log('Look something happened ', e)
 		return rates["EUR"]
@@ -130,13 +129,13 @@ async function getBSPrice () {
 				console.log('Error ', error)
 				return rates["VEF"]
 			}else{
-				rate = body.substr(body.indexOf(":") +1 ,body.indexOf("}")  - 1);
-			  	rates["VEF"] = parseFloat(rate);
-			  	return parseFloat(rate);
+			body = JSON.parse(body)
+		  	rates["VEF"] = body["USD"]
+		  	return body;
 			}
 		});
-		value = value.substr(value.indexOf(":") +1 ,value.indexOf("}")  - 1 );
-		return parseFloat(value);
+		value = JSON.parse(value)
+		return value["USD"] ;
 	}catch(e){
 		console.log('Look something happened ', e)
 		return rates["VEF"]
