@@ -1,0 +1,24 @@
+{
+  "name": "prueba-backend",
+  "version": "1.0.0",
+  "description": "Prueba Luis Liguori",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lugaliguori/prueba-backend.git"
+  },
+  "author": "Luis Liguori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lugaliguori/prueba-backend/issues"
+  },
+  "homepage": "https://github.com/lugaliguori/prueba-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  }
+}
